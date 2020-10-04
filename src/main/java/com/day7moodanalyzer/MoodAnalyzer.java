@@ -1,9 +1,19 @@
 
+
 package com.day7moodanalyzer;
 
 public class MoodAnalyzer {
 
-	public String analyzeMood(String message) {
+	private String message;
+	
+	public MoodAnalyzer() {
+	}
+
+	public MoodAnalyzer(String message) {
+		this.message = message;
+	}
+
+	public String analyzeMood() {
 		if(message.toLowerCase().contains("sad"))
 			return "SAD";			
 		else if(message.toLowerCase().contains("happy"))
