@@ -1,4 +1,5 @@
 
+
 package com.day7moodanalyzer;
 
 import static org.junit.Assert.*;
@@ -14,9 +15,14 @@ public class moodAnalyzerTesting {
 		moodObject=new MoodAnalyzer();
 	}
 	
-	@Test
-	public void moodTest() {
-		assertEquals("Happy Mood",moodObject.analyzeMood("I am in Happy Mood"));
-		assertEquals("Sad Mood",moodObject.analyzeMood("I am in Sad Mood"));
-	}	
+//	@Test
+//	public void moodTest() {
+//		assertEquals("Happy Mood",moodObject.analyzeMood("I am in Happy Mood"));
+//		assertEquals("Sad Mood",moodObject.analyzeMood("I am in Sad Mood"));
+//	}
+	
+	@Test 
+	public void givenMood_WhenSad_ReturnSad() {
+		assertEquals("SAD",moodObject.analyzeMood("I am in Sad Mood"));
+	}
 }
