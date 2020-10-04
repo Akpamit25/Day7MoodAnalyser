@@ -1,5 +1,4 @@
 
-
 package com.day7moodanalyzer;
 
 public class MoodAnalyzer {
@@ -13,7 +12,7 @@ public class MoodAnalyzer {
 		this.message = message;
 	}
 
-	public String analyzeMood() {
+	public String analyzeMood()throws MoodAnalysisException {
 		try {
 			if(message.toLowerCase().contains("sad"))
 				return "SAD";			
@@ -22,7 +21,7 @@ public class MoodAnalyzer {
 			else
 				return "HAPPY";
 		} catch (NullPointerException e) {
-			return "HAPPY";
+			throw new MoodAnalysisException("Message Null, Please Enter Proper Message");
 		}
 	}
 	
