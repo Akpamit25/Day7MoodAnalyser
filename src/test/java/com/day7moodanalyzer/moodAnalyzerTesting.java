@@ -1,5 +1,4 @@
 
-
 package com.day7moodanalyzer;
 
 import static org.junit.Assert.*;
@@ -7,7 +6,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class moodAnalyzerTesting {
+public class moodAnalyzerTesting  {
 	private MoodAnalyzer moodObject;
 	
 	@Before
@@ -30,6 +29,12 @@ public class moodAnalyzerTesting {
 	@Test 
 	public void givenMood_WhenAny_ReturnHappy() {
 		moodObject=new MoodAnalyzer("I am in Any Mood");
+		assertEquals("HAPPY",moodObject.analyzeMood());
+	}
+	
+	@Test
+	public void givenMood_WhenNull_ReturnHappy() {
+		moodObject=new MoodAnalyzer();
 		assertEquals("HAPPY",moodObject.analyzeMood());
 	}
 }
